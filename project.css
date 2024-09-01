@@ -1,4 +1,4 @@
-    * {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,16 +9,18 @@
     margin: 0; 
     }
     .b1 {
-    display: flex;
-    justify-content: space-between;
-    padding:15px;
-    color: white;
-    font-size: x-large;
-    background-color: #709d08;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        color: white;
+        font-size: x-large;
+        background-color: #709d08;
+        position: sticky; 
+        top: 0; 
+        z-index: 1000;     
+        left: 0; 
+       right: 0; 
     }
     .menu-toggle {
         display: none;
@@ -40,7 +42,98 @@
     nav ul li {
     font-size: larger;
     font-family: sans-serif;
-    }
+    } */
+    * {
+        margin: 0;
+        /* padding: 0; */
+        box-sizing: border-box;
+        }
+    
+         body {
+       padding: 0;
+        overflow-x: hidden;  
+        margin: 0; 
+        }
+        .b1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            color: white;
+            font-size: x-large;
+            background-color: #709d08;
+            position: fixed; 
+            top: 0; 
+            z-index: 1000;     
+            left: 0; 
+           right: 0; 
+            
+        }
+        
+        /* Logo and Title Styling */
+        .log {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Navigation Styling */
+       .bar {
+            display: flex;
+            justify-content: center; /* Center the nav content */
+            flex: 1;
+             /* Allow nav to take up space */
+        }
+         nav {
+            display: flex;
+           
+             /* Allow nav to take up space */
+        }
+        nav ul {
+            display: flex;
+           
+            list-style: none;
+            margin: 0;
+            
+            column-gap: 40px;
+            
+            
+        }
+        
+        /* Hamburger Icon Styling */
+        .hamburger {
+            display: none; /* Hidden by default */
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            right: 15px; /* Position to the right with some padding */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust vertical centering */
+        }
+        
+        /* Menu Toggle Styles */
+        .menu-toggle {
+            display: none; /* Hidden by default */
+        }
+        
+        .menu-toggle:checked ~ nav ul {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            padding: 20px;
+            background-color: #fff;
+            position: absolute;
+            top: 60px; /* Position below the header */
+            right: 0; /* Align to the right */
+            width: 100%; /* Full width */
+        }
+        .bar {
+            display: flex;
+            justify-content: center; 
+           
+        }
+        .ch{
+            margin-top: 100px;
+        }
     .b2 {
     display: flex;
     align-items: center;
@@ -105,6 +198,18 @@
         border-color: black;
        
     } 
+    .b5 .honeycontent h6{
+        color: #80B500;
+        font-weight: 700;
+          margin-bottom: 15px; 
+          font-size: 15px;
+           font-family: sans-serif;
+    }
+    .b5 .honeycontent h1{
+        font-family: sans-serif; 
+        font-size: 40px; 
+        font-weight: 600;
+    }
     .b3 {
         display: flex;
         padding-top: 65px;
@@ -113,10 +218,17 @@
         padding-bottom: 50px;
         }
     .b3 img { 
-    transition: all 3.5s ease 0s;
+    transition: all 1s ease 0s;
     }
     .b3 img:hover {
     transform: scale(1.1);
+    }
+    .bh{
+        display: flex; 
+        /* column-gap: 20px;  */
+        line-height: 40px; 
+        font-size: large; 
+        column-gap: 70px;
     }
     
     .contain {
@@ -231,6 +343,8 @@
     width: 1000px; 
     height: 600px;
     overflow: hidden;
+    margin: 0 auto; /* Center the container horizontally */
+     
 }
 .video-container img {
     width: 100%;
@@ -252,21 +366,33 @@
 .video-container:hover iframe {
     display: block;
 }
-.parent{
+.b8 {
     display: flex;
-    column-gap: 70px;
-    padding: 40px 100px;
-    height: 40%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
-.A,.B{
+
+.parent {
     display: flex;
-    column-gap: 30px;
-    border: 2px solid rgb(236, 231, 231);
-    font-size: 18px;
+    flex-direction: row; /* Align items in a row by default */
+    justify-content: center;
+    gap: 50px; /* Space between the testimonial blocks */
+    width: 100%;
+}
+
+.A, .B {
+    display: flex;
+    flex-direction: row; /* Align image and text side by side */
+    align-items: center;
+    text-align: left; /* Align text to the left */
+    gap: 20px; 
     font-family: sans-serif;
-    color: gray;
-    padding: 30px; 
+    padding: 30px;/* Space between the image and text */
 }
+
 .fd{
     line-height: 30px;
 }
@@ -275,6 +401,7 @@
     font-size:medium;
     font-weight: bold;
     line-height: 30px;
+    
 }   
 .b9a{
     display: flex;
@@ -285,6 +412,7 @@
     height: 300px;
     width: 350px;         
 }
+
 .imgcontain {
         height: 530px; 
         width: 350px;  
@@ -310,7 +438,7 @@
     font-size:small; 
 }
 .b10{    
-    background-color: whitesmoke;
+    background-color: white;
     padding: 50px;
     width: 100%;
     height: 300px;
@@ -393,7 +521,9 @@ h1:hover{
 @media screen  and (max-width:576px){
     body{
         width: 100%;
+     overflow-x: hidden;
     }
+   
     .b2 {
         display: flex;
         flex-direction: column;
@@ -403,7 +533,7 @@ h1:hover{
         box-sizing: border-box; 
         margin-top: 6px;
     }
-    
+   
     .b2 > div {
         display: flex;
         flex-direction: column; 
@@ -411,6 +541,7 @@ h1:hover{
         text-align: center;
         width: 100%;
         margin-bottom: 20px; 
+        margin-top: -200px;
     }
 
     .b2a {
@@ -418,14 +549,13 @@ h1:hover{
         flex-direction: column; 
         align-items: center;
         text-align: center;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
+
     }
 
     .b2a img {
-        max-width: 80px; 
-        /* height: auto;  */
-        margin-bottom: 10px; 
-        height: 30px;
+     display: none;
+     
     }
 
     .b2a h4 {
@@ -435,12 +565,12 @@ h1:hover{
 
     .b2 img {
         width: 80%; 
-        height: auto; 
-        margin-top: 20px; 
+        height: 19vh; 
+         
     }
 
     .explore-button {
-        width: 50%; 
+        width: 80%; 
         padding: 10px; 
         margin-top: 20px;
         font-size: 16px; 
@@ -452,39 +582,67 @@ h1:hover{
         display: grid;
         grid-template-columns: auto;
         row-gap: 20px;
-        background-color: whitesmoke;  
+        background-color: whitesmoke; 
+        align-items: center; 
+        padding: 20px 20px;
     }
     .b5{
         display: flex;
         flex-direction: column;
-        padding: 0;
-        margin: 0;
+        padding: 20px;
         align-items: center;
+        
     }
+    .ch{
+         margin-top: 0px; 
+        
+    }
+    .honeycontent{
+        text-align: center;
+        padding: 30px;
+        margin: 0 20px; /* Add left and right margin */
+    max-width: 90vw;
+    }
+    .b5 img{
+        padding: 30px;
+        height:50vh;
+        width: 90vw;
+    }
+    
     .b8{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .parent{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 10px;
+    .parent {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center-align items */
+        row-gap: 20px; /* Add some spacing between testimonial blocks */
     }
-    .video-container {
-       
-        width: 500px; 
-        height: 400px;
-        overflow: hidden;
-        padding: 30px;
+
+    .A, .B {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center-align the content */
+        text-align: center; /* Center-align text for smaller screens */
+        width: 100%; /* Full width for each testimonial block */
+        max-width: 100%; /* Allow full width on smaller screens */
     }
+
+    .A img, .B img {
+        margin-bottom: 10px; /* Adds space between the image and text */
+    }
+    
+   
    .b9,.b9a{
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 30px;
+   
+    align-items: center;
+ 
    }
+   
    nav ul {
    
     display: none;
@@ -499,7 +657,9 @@ h1:hover{
 }
 
 nav ul li {
-    margin: 5px 0; 
+   
+    font-size: 20px;
+    
 }
 
 .hamburger {
@@ -509,22 +669,28 @@ nav ul li {
 
 .menu-toggle:checked ~ nav ul {
     display: flex;
-    column-gap: 25px;
-    padding: 20px;
+    row-gap: 20px;
+    padding: 20px; 
+    flex-direction: column;
+    align-items: flex-start;
     
 }
 .menu-toggle:checked ~ nav ul li a {
     color: #000;
+    
 }
 .b3 {
         flex-direction: column;
-        padding-left: 20px; 
-        gap: 20px;
+        padding: 20px 10px; 
+        row-gap: 0px;
+        
+        
     }
 
     .b3 img {
-        width: 100%; 
-        height: auto; 
+        width: 100vw; 
+        height: 80%; 
+         padding: 10px 30px;
     }
     .b4{
         margin-top: 40px;
@@ -560,12 +726,15 @@ nav ul li {
         align-items: center; 
         row-gap: 30px;
         padding-bottom: 100px;
+        margin-bottom: 30px;
+        
     }
 
     .b10a {
         flex-direction: column; 
         align-items: center; 
         text-align: center; 
+        margin-bottom: 30px;
     }
 
     .b10a img {
@@ -574,31 +743,14 @@ nav ul li {
     }
 
     .b10 h2, .b10 p {
-        font-size: 16px; 
-        
+        font-size: 16px;   
     }
-    .b10 {
-        padding: 15px; 
-    }
-
-    .b10b {
-        padding: 15px;
-        flex-direction: column;
-        row-gap: 15px; 
-    }
-
-    .b10a {
-        margin-bottom: 20px; 
-    }
-
-    .b10a img {
-        width: 80px; 
-    }
-
     .b11 {
         flex-direction: column; 
         padding: 15px; 
-        gap: 15px; 
+        gap: 15px;
+        margin-top: 100px; 
+        padding-top: 150px;
     }
 
     .b11 > div {
@@ -640,11 +792,12 @@ nav ul li {
         column-gap: 20px;
     } 
     .b10{    
-    background-color: whitesmoke;
-    padding: 50px;
+    background-color: white;
+    padding: 10px;
     width: 100%;
     height: 300px;
     line-height: 20px; 
+    
  
 }
 .b10 h2,p{
@@ -653,7 +806,7 @@ nav ul li {
     
 }
 .b10b{
-    padding: 60px 80px 60px 60px;
+    padding: 10px 10px 10px 10px;
     background-color: white; 
     display: flex;
     column-gap: 80px;
@@ -668,13 +821,14 @@ nav ul li {
 
     .b11 {
         flex-direction: column; 
-        margin-top: 600px;
+        margin-top: 80px;
         text-align: center;
     }
 
     .sub, .sub1 {
         margin-bottom: 15px;
       justify-content: center;
+      display: none;
     }
 
     .b11e form input {
@@ -684,11 +838,39 @@ nav ul li {
 
     .b11a img {
         width: 50px;
-        margin-bottom: 5px; 
+        margin-top: 5px; 
     }
     .sub1 img{
         height: 30px;
         width: 30px;
     }
+    .brocc{
+        
+        padding-top: 300px;
+    }
     
+    .footer {
+       /* Stack items vertically on mobile */
+       column-gap: 5px;
+        font-size: 15px;/* Add spacing between stacked items */
+    }
+    .b12{
+        font-size: 15px;
+        padding-left: 5px;
+        column-gap: 20px;
+        padding: 15px 5px ;
+    }
+
+    .footer > * {
+        width: 100%; 
+       /* Ensure each item takes full width on mobile */
+    }
+
+    
+    .video-container {
+        height: 50vh; /* 50% of the viewport height for small screens */
+        width: 90vw; /* 90% of the viewport width for small screens */
+        max-width: none; /* Remove maximum width constraint */
+        max-height: none; /* Remove maximum height constraint */
+    }  
 }
